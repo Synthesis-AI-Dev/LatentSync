@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import cv2 # Solves problem with zlib load order, do not remove
 import argparse
 from omegaconf import OmegaConf
 import torch
@@ -21,6 +22,7 @@ from latentsync.pipelines.lipsync_pipeline import LipsyncPipeline
 from diffusers.utils.import_utils import is_xformers_available
 from accelerate.utils import set_seed
 from latentsync.whisper.audio2feature import Audio2Feature
+
 
 
 def main(config, args):
